@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		@apply scroll-smooth;
+	}
+
+	body {
+		font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+		background-color: hsl(0, 0%, 97%);
+	}
+}
+
+@layer components {
+	.article-title {
+		@apply text-2xl font-bold text-slate-600 break-words mb-6 after:content-['...'] after:block after:text-base after:mt-4 xl:text-3xl;
+	}
+
+	.article-desc {
+		@apply text-sm text-slate-500 break-words my-2;
+	}
+
+	.sidebar-item {
+		@apply text-sm text-slate-700 cursor-pointer px-6 py-4 rounded-e-full;
+	}
+
+	.sidebar-icon {
+		@apply mr-6 text-base;
+	}
+}
