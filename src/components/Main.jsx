@@ -3,7 +3,7 @@ import Navigation from '@components/Navigation';
 import Article from '@components/Article';
 import TopButton from '@components/TopButton';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 
 const Main = () => {
 	const [isShownSidebar, setIsShownSidebar] = useState(false); // show or hide sidebar on small screens
