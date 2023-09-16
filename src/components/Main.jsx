@@ -2,7 +2,7 @@ import Header from '@components/Header';
 import Navigation from '@components/Navigation';
 import Article from '@components/Article';
 import TopButton from '@components/TopButton';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { useState } from 'react';
 
 const Main = () => {
