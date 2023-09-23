@@ -8,11 +8,12 @@ import {
 	faChevronDown,
 	faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Navigation = ({ isMenuShown, onMenuClose }) => {
 	const location = useLocation(); // selected URL paths used for marking menu items as active or not
+	const navigate = useNavigate();
 
 	// expand/collapse sidebar menu items
 	const [isHiddenVirtualMenu, setIsHiddenVirtualMenu] = useState(true);
@@ -51,7 +52,7 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 							>
 								<FontAwesomeIcon
 									icon={faHouse}
-									className='sidebar-icon'
+									className='mr-6 text-base'
 								/>
 								Главная
 							</p>
@@ -66,38 +67,40 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 							>
 								<FontAwesomeIcon
 									icon={faUser}
-									className='sidebar-icon'
+									className='mr-6 text-base'
 								/>
 								Обо мне
 							</p>
 						</Link>
 					</li>
-					<li>
-						<Link>
-							<p
-								className='flex items-center hover:bg-slate-50 sidebar-item'
-								onClick={() =>
-									setIsHiddenVirtualMenu(!isHiddenVirtualMenu)
-								}
-							>
-								<span>
-									<FontAwesomeIcon
-										icon={faDisplay}
-										className='sidebar-icon'
-									/>
-									Средства управления рабочим столом и
-									создания дополнительных рабочих столов
-								</span>
+					<li onClick={onMenuClose}>
+						<p
+							className='flex items-center hover:bg-slate-50 sidebar-item'
+							onClick={() => navigate('/virtual-desktops-common')}
+						>
+							<span>
 								<FontAwesomeIcon
-									icon={
-										isHiddenVirtualMenu
-											? faChevronDown
-											: faChevronUp
-									}
-									className='ml-4 text-base'
+									icon={faDisplay}
+									className='mr-6 text-base'
 								/>
-							</p>
-						</Link>
+								Средства управления рабочим столом и создания
+								дополнительных рабочих столов
+							</span>
+							<FontAwesomeIcon
+								icon={
+									isHiddenVirtualMenu
+										? faChevronDown
+										: faChevronUp
+								}
+								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								onClick={e => {
+									e.stopPropagation();
+									setIsHiddenVirtualMenu(
+										!isHiddenVirtualMenu
+									);
+								}}
+							/>
+						</p>
 						{!isHiddenVirtualMenu && (
 							<ul>
 								<li onClick={onMenuClose}>
@@ -136,31 +139,33 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 							</ul>
 						)}
 					</li>
-					<li>
-						<Link>
-							<p
-								className='flex items-center hover:bg-slate-50 sidebar-item'
-								onClick={() =>
-									setIsHiddenProcessMenu(!isHiddenProcessMenu)
-								}
-							>
-								<span>
-									<FontAwesomeIcon
-										icon={faGears}
-										className='sidebar-icon'
-									/>
-									Средства управления процессами в ОС
-								</span>
+					<li onClick={onMenuClose}>
+						<p
+							className='flex items-center hover:bg-slate-50 sidebar-item'
+							onClick={() => navigate('/process-managers-common')}
+						>
+							<span>
 								<FontAwesomeIcon
-									icon={
-										isHiddenProcessMenu
-											? faChevronDown
-											: faChevronUp
-									}
-									className='ml-4 text-base'
+									icon={faGears}
+									className='mr-6 text-base'
 								/>
-							</p>
-						</Link>
+								Средства управления процессами в ОС
+							</span>
+							<FontAwesomeIcon
+								icon={
+									isHiddenProcessMenu
+										? faChevronDown
+										: faChevronUp
+								}
+								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								onClick={e => {
+									e.stopPropagation();
+									setIsHiddenProcessMenu(
+										!isHiddenProcessMenu
+									);
+								}}
+							/>
+						</p>
 						{!isHiddenProcessMenu && (
 							<ul>
 								<li onClick={onMenuClose}>
@@ -199,32 +204,32 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 							</ul>
 						)}
 					</li>
-					<li>
-						<Link>
-							<p
-								className='flex items-center hover:bg-slate-50 sidebar-item'
-								onClick={() =>
-									setIsHiddenBackupMenu(!isHiddenBackupMenu)
-								}
-							>
-								<span>
-									<FontAwesomeIcon
-										icon={faDatabase}
-										className='sidebar-icon'
-									/>
-									Средства резервного копирования и
-									восстановления данных
-								</span>
+					<li onClick={onMenuClose}>
+						<p
+							className='flex items-center hover:bg-slate-50 sidebar-item'
+							onClick={() => navigate('/backups-common')}
+						>
+							<span>
 								<FontAwesomeIcon
-									icon={
-										isHiddenBackupMenu
-											? faChevronDown
-											: faChevronUp
-									}
-									className='ml-4 text-base'
+									icon={faDatabase}
+									className='mr-6 text-base'
 								/>
-							</p>
-						</Link>
+								Средства резервного копирования и восстановления
+								данных
+							</span>
+							<FontAwesomeIcon
+								icon={
+									isHiddenBackupMenu
+										? faChevronDown
+										: faChevronUp
+								}
+								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								onClick={e => {
+									e.stopPropagation();
+									setIsHiddenBackupMenu(!isHiddenBackupMenu);
+								}}
+							/>
+						</p>
 						{!isHiddenBackupMenu && (
 							<ul>
 								<li onClick={onMenuClose}>

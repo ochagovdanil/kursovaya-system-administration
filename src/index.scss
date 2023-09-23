@@ -22,11 +22,11 @@
 		@apply text-sm text-slate-500 break-words my-2;
 	}
 
-	.sidebar-item {
-		@apply text-sm text-slate-700 cursor-pointer px-6 py-4 rounded-e-full;
+	.article-image {
+		@apply block mx-auto my-8 shadow-lg rounded-sm;
 	}
 
-	.sidebar-icon {
-		@apply mr-6 text-base;
+	.sidebar-item {
+		@apply text-sm text-slate-700 cursor-pointer pl-6 pr-3 py-4 rounded-e-full;
 	}
 }

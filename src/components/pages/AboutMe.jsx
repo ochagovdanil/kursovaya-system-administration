@@ -8,6 +8,12 @@ const AboutMe = () => {
 						<p>Очагов Данил Олегович</p>
 					</li>
 					<li className='list-disc'>
+						<p>НИУ МГСУ</p>
+					</li>
+					<li className='list-disc'>
+						<p>ИСТАС</p>
+					</li>
+					<li className='list-disc'>
 						<p>ИЦТМС 3-3</p>
 					</li>
 					<li className='list-disc'>
