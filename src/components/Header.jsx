@@ -10,7 +10,7 @@ const Header = ({ onMenuOpen }) => {
 			<div className='mx-auto px-6 flex justify-between items-center lg:container'>
 				<FontAwesomeIcon
 					icon={faBars}
-					className='block text-2xl text-slate-600 cursor-pointer xl:hidden'
+					className='block text-2xl text-black-desc cursor-pointer xl:hidden'
 					onClick={onMenuOpen}
 				/>
 				<img

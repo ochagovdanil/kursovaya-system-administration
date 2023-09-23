@@ -22,8 +22,8 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 
 	// make menu item active or non active
 	const applyLinkStyles = path => {
-		if (location.pathname === path) return 'bg-sky-100 font-bold shadow-sm';
-		return 'hover:bg-slate-50';
+		if (location.pathname === path) return 'bg-primary font-bold shadow-sm';
+		return 'hover:bg-primary-light';
 	};
 
 	return (
@@ -75,7 +75,9 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 					</li>
 					<li onClick={onMenuClose}>
 						<p
-							className='flex items-center hover:bg-slate-50 sidebar-item'
+							className={`flex items-center sidebar-item ${applyLinkStyles(
+								'/virtual-desktops-common'
+							)}`}
 							onClick={() => navigate('/virtual-desktops-common')}
 						>
 							<span>
@@ -92,7 +94,7 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 										? faChevronDown
 										: faChevronUp
 								}
-								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								className='ml-4 p-3 text-base rounded-full hover:bg-primary-gray'
 								onClick={e => {
 									e.stopPropagation();
 									setIsHiddenVirtualMenu(
@@ -141,7 +143,9 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 					</li>
 					<li onClick={onMenuClose}>
 						<p
-							className='flex items-center hover:bg-slate-50 sidebar-item'
+							className={`flex items-center sidebar-item ${applyLinkStyles(
+								'/process-managers-common'
+							)}`}
 							onClick={() => navigate('/process-managers-common')}
 						>
 							<span>
@@ -157,7 +161,7 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 										? faChevronDown
 										: faChevronUp
 								}
-								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								className='ml-4 p-3 text-base rounded-full hover:bg-primary-gray'
 								onClick={e => {
 									e.stopPropagation();
 									setIsHiddenProcessMenu(
@@ -206,7 +210,9 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 					</li>
 					<li onClick={onMenuClose}>
 						<p
-							className='flex items-center hover:bg-slate-50 sidebar-item'
+							className={`flex items-center sidebar-item ${applyLinkStyles(
+								'/backups-common'
+							)}`}
 							onClick={() => navigate('/backups-common')}
 						>
 							<span>
@@ -223,7 +229,7 @@ const Navigation = ({ isMenuShown, onMenuClose }) => {
 										? faChevronDown
 										: faChevronUp
 								}
-								className='ml-4 p-3 text-base rounded-full hover:bg-slate-200'
+								className='ml-4 p-3 text-base rounded-full hover:bg-primary-gray'
 								onClick={e => {
 									e.stopPropagation();
 									setIsHiddenBackupMenu(!isHiddenBackupMenu);

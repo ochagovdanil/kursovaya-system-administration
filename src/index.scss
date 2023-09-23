@@ -15,11 +15,11 @@
 
 @layer components {
 	.article-title {
-		@apply text-2xl font-bold text-slate-600 break-words mb-6 after:content-['...'] after:block after:text-base after:mt-4 xl:text-3xl;
+		@apply text-2xl font-bold text-black-title break-words mb-6 after:content-['...'] after:block after:text-base after:mt-4 xl:text-3xl;
 	}
 
 	.article-desc {
-		@apply text-sm text-slate-500 break-words my-2;
+		@apply text-sm text-black-desc break-words my-2;
 	}
 
 	.article-image {
@@ -27,6 +27,6 @@
 	}
 
 	.sidebar-item {
-		@apply text-sm text-slate-700 cursor-pointer pl-6 pr-3 py-4 rounded-e-full;
+		@apply text-sm text-black-title cursor-pointer pl-6 pr-3 py-4 rounded-e-full;
 	}
 }

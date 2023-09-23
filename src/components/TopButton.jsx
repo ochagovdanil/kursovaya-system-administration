@@ -26,12 +26,12 @@ const TopButton = () => {
 		<>
 			{isButtonVisible && (
 				<button
-					className='fixed bottom-6 right-6 border-none outline-none bg-amber-300 px-4 py-3 rounded-full shadow-md z-50 hover:bg-amber-400'
+					className='fixed bottom-6 right-6 border-none outline-none bg-accent px-4 py-3 rounded-full shadow-md z-50 hover:bg-accent-dark'
 					onClick={handleClick}
 				>
 					<FontAwesomeIcon
 						icon={faChevronUp}
-						className='text-base text-slate-600'
+						className='text-base text-black-desc'
 					/>
 				</button>
 			)}
