@@ -1,7 +1,12 @@
+import ExternalLink from '@components/ExternalLink';
+
 const Desktops = () => {
 	return (
 		<>
-			<h1 className='article-title'>Desktops - приложение</h1>
+			<h1 className='article-title'>
+				Desktops - приложение
+				<ExternalLink href='https://learn.microsoft.com/en-us/sysinternals/downloads/desktops' />
+			</h1>
 			<p className='article-desc'>
 				Соображения высшего порядка, а также социально-экономическое
 				развитие играет важную роль в формировании дальнейших

@@ -1,3 +1,4 @@
+import ExternalLink from '@components/ExternalLink';
 import demo from '../../../assets/Screenshot_1.jpg';
 import demo2 from '../../../assets/Screenshot_2.jpg';
 import Image from '@components/Image';
@@ -5,7 +6,10 @@ import Image from '@components/Image';
 const VirtuaWin = () => {
 	return (
 		<>
-			<h1 className='article-title'>VirtuaWin - приложение</h1>
+			<h1 className='article-title'>
+				VirtuaWin - приложение
+				<ExternalLink href='https://virtuawin.sourceforge.io/' />
+			</h1>
 			<p className='article-desc'>
 				Соображения высшего порядка, а также социально-экономическое
 				развитие играет важную роль в формировании дальнейших
