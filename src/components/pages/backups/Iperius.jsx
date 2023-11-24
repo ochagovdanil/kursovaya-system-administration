@@ -1,4 +1,5 @@
 import ExternalLink from '@components/ExternalLink';
+import Download from '@components/Download';
 
 const Iperius = () => {
 	return (
@@ -7,7 +8,7 @@ const Iperius = () => {
 				Iperius Backup - приложение
 				<ExternalLink href='https://www.iperiusbackup.com/' />
 			</h1>
-			<p className='article-desc'>Описание программы.</p>
+			<Download />
 		</>
 	);
 };
