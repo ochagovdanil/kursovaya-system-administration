@@ -18,12 +18,14 @@ const Header = ({ onMenuOpen }) => {
 					alt='Логотип НИУ МГСУ'
 					title='НИУ МГСУ'
 					className='hidden h-14 py-2 sm:block'
+					loading='lazy'
 				/>
 				<img
 					src={logo}
 					alt='Логотип НИУ МГСУ'
 					title='НИУ МГСУ'
 					className='block h-14 py-2 sm:hidden'
+					loading='lazy'
 				/>
 			</div>
 		</header>
