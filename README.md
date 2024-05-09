@@ -11,9 +11,6 @@
 <a href="https://github.com/ochagovdanil/kursovaya-system-administration/issues">
 	<img alt="Issues" src="https://img.shields.io/github/issues/ochagovdanil/kursovaya-system-administration.svg" />
 </a>
-<a href="https://opensource.org/licenses/MIT">
-	<img alt="Issues" src="https://img.shields.io/badge/License-GPLv3-yellow.svg" />
-</a>
 
 <!-- --------LOGO-------- -->
 <br />
