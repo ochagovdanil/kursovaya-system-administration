@@ -40,7 +40,7 @@
 <div align="center">
 	<img src="./screenshots/preview.png" alt="Preview" />
 </div>
-<p><strong>FluentWave</strong> - built via:</p>
+<p><strong>kursovaya-system-administration</strong> - built via:</p>
 <ul>
 	<li>TailwindCSS</li>
 	<li>Vite</li>
@@ -64,12 +64,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<!-- --------LICENSE-------- -->
-
-## License
-
-Distributed under the GNU GPL v3.0 License. See `LICENSE` for more information.
 
 <!-- --------CONTACT-------- -->
 
